@@ -1,0 +1,67 @@
+<section class="hero surface">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7 order-2 order-lg-1">
+        <span class="eyebrow" *ngIf="profile.available">
+          <i class="bi bi-circle-fill me-1 available-dot"></i>Available for work
+        </span>
+        <h1 class="display-4 fw-bold mt-3 mb-3">
+          Hi, I'm {{ profile.name }} —<br />a {{ profile.role }}.
+        </h1>
+        <p class="lead text-muted mb-4">{{ profile.tagline }}</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-primary" routerLink="/contact">Hire Me</a>
+          <a class="btn btn-outline-light" routerLink="/projects">View my work</a>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a
+            *ngFor="let social of profile.socials"
+            class="hero-social"
+            [href]="social.url"
+            [attr.aria-label]="social.label"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi" [ngClass]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 text-center">
+        <img class="hero-photo img-fluid" src="assets/images/profile.jpg" [alt]="profile.name" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-4" *ngFor="let stat of stats">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="text-muted">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section surface">
+  <div class="container">
+    <div class="text-center mb-2"><span class="eyebrow">What I do</span></div>
+    <h2 class="section-heading d-block text-center mx-auto">Skills &amp; expertise</h2>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4" *ngFor="let group of skillGroups">
+        <div class="card h-100 shadow-sm card-hover">
+          <div class="card-body p-4">
+            <div class="skill-icon mb-3"><i class="bi" [ngClass]="group.icon"></i></div>
+            <h3 class="h5 fw-bold">{{ group.title }}</h3>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <span class="badge badge-tech rounded-pill px-3 py-2" *ngFor="let skill of group.skills">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

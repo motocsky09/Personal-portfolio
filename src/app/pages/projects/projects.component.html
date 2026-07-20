@@ -1,0 +1,36 @@
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-2"><span class="eyebrow">My work</span></div>
+    <h2 class="section-heading d-block text-center mx-auto">Featured projects</h2>
+    <p class="text-center text-muted mx-auto mb-5 intro-text">
+      A selection of applications I have designed and built, covering frontend, backend and everything in between.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-6" *ngFor="let project of projects">
+        <article class="card h-100 shadow-sm card-hover">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h3 class="h5 fw-bold mb-0">{{ project.name }}</h3>
+              <span class="badge year-badge fw-normal">{{ project.year }}</span>
+            </div>
+            <p class="text-muted">{{ project.summary }}</p>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="badge badge-tech rounded-pill px-3 py-2" *ngFor="let tech of project.tech">
+                {{ tech }}
+              </span>
+            </div>
+            <div class="mt-auto d-flex gap-3">
+              <a *ngIf="project.demoUrl" class="link-action" [href]="project.demoUrl" target="_blank" rel="noopener">
+                <i class="bi bi-box-arrow-up-right me-1"></i>Live demo
+              </a>
+              <a *ngIf="project.sourceUrl" class="link-action" [href]="project.sourceUrl" target="_blank" rel="noopener">
+                <i class="bi bi-github me-1"></i>Source
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-8">
+        <span class="eyebrow">Resume</span>
+        <h2 class="fw-bold mt-2 mb-2">My experience &amp; background</h2>
+        <p class="text-muted mb-0">
+          {{ profile.role }} based in {{ profile.location }}. Here is a summary of my journey so far.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <a class="btn btn-primary" href="assets/cv/Andrei-Motoc-CV.pdf" download>
+          <i class="bi bi-download me-2"></i>Download CV
+        </a>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h3 class="h5 fw-bold mb-4"><i class="bi bi-briefcase me-2 text-primary"></i>Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let item of experience">
+            <div class="timeline-period">{{ item.period }}</div>
+            <h4 class="h6 fw-bold mb-1">{{ item.title }}</h4>
+            <div class="text-primary small mb-2">{{ item.organisation }}</div>
+            <p class="text-muted mb-0">{{ item.description }}</p>
+          </div>
+        </div>
+
+        <h3 class="h5 fw-bold mt-5 mb-4"><i class="bi bi-mortarboard me-2 text-primary"></i>Education</h3>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let item of education">
+            <div class="timeline-period">{{ item.period }}</div>
+            <h4 class="h6 fw-bold mb-1">{{ item.title }}</h4>
+            <div class="text-primary small mb-2">{{ item.organisation }}</div>
+            <p class="text-muted mb-0">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <h3 class="h5 fw-bold mb-4"><i class="bi bi-stars me-2 text-primary"></i>Skills</h3>
+        <div class="card shadow-sm mb-4" *ngFor="let group of skillGroups">
+          <div class="card-body p-4">
+            <h4 class="h6 fw-bold mb-3">{{ group.title }}</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge badge-tech rounded-pill px-3 py-2" *ngFor="let skill of group.skills">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="h5 fw-bold mt-5 mb-4"><i class="bi bi-translate me-2 text-primary"></i>Languages</h3>
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let language of languages; let last = last" [class.mb-3]="!last">
+              <span class="fw-semibold">{{ language.name }}</span>
+              <span class="text-body-secondary">{{ language.level }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

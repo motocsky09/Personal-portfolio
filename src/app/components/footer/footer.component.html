@@ -1,0 +1,29 @@
+<footer class="footer text-white">
+  <div class="container py-5">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6">
+        <h3 class="h5 fw-bold mb-2">Let's build something together</h3>
+        <p class="mb-0 text-white-50">{{ profile.tagline }}</p>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <a class="btn btn-primary mb-3" routerLink="/contact">Get in touch</a>
+        <div class="d-flex gap-3 justify-content-lg-end">
+          <a
+            *ngFor="let social of profile.socials"
+            class="social-link"
+            [href]="social.url"
+            [attr.aria-label]="social.label"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi" [ngClass]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-secondary my-4" />
+    <p class="text-center text-white-50 small mb-0">
+      © {{ year }} {{ profile.name }}. Built with Angular &amp; Bootstrap.
+    </p>
+  </div>
+</footer>

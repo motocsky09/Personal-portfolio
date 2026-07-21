@@ -4,7 +4,7 @@ export const PROFILE: Profile = {
   name: 'Andrei Alexandru Motoc',
   role: 'Full-Stack Developer',
   tagline:
-    'Full-Stack Developer with hands-on experience building end-to-end web applications using .NET (C#) and Angular. I apply Clean Architecture and SOLID principles across the stack — RESTful APIs with ASP.NET Core, SPA interfaces with Angular, and SQL Server / MongoDB for persistence. I am looking for an entry-level Full-Stack role to contribute alongside a skilled engineering team.',
+    'Full-Stack Developer with hands-on experience building end-to-end web applications using .NET (C#) and Angular.',
   location: 'Oradea, Romania',
   email: 'motoc.andreialexandru@gmail.com',
   phone: '+40 724 789 573',
@@ -26,7 +26,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     title: 'Backend',
     icon: 'bi-hdd-network',
-    skills: ['C#', 'ASP.NET Core', 'Entity Framework', 'REST APIs', 'SQL Server', 'MongoDB'],
+    skills: ['C#', '.NET', 'Entity Framework', 'REST APIs', 'SQL Server', 'MongoDB'],
   },
   {
     title: 'Frontend',
@@ -36,7 +36,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     title: 'Tools & Practices',
     icon: 'bi-tools',
-    skills: ['Git', 'Docker', 'Swagger / Postman', 'Clean Architecture', 'SOLID', 'Ollama / LLMs'],
+    skills: ['Git', 'Docker', 'Swagger / Postman', 'GitHub', 'MVC','Clean Architecture', 'S.O.L.I.D.', 'Ollama / LLMs'],
   },
 ];
 
@@ -45,9 +45,9 @@ export const PROJECTS: Project[] = [
     name: 'Somo',
     summary:
       'A veterinary clinic finder built as an Angular SPA on ASP.NET Core and MongoDB. Pet owners locate nearby clinics through Google Maps geolocation and book appointments via a guided 6-step flow, secured with JWT and role-based authorization over a Clean Architecture backend.',
-    year: '2025',
+    year: '2025 - present',
     tech: ['Angular', 'ASP.NET Core', 'MongoDB', 'JWT'],
-    sourceUrl: 'https://github.com/motocsky09',
+    sourceUrl: 'https://github.com/motocsky09/Somo',
   },
   {
     name: 'Device Management System',
@@ -55,15 +55,15 @@ export const PROJECTS: Project[] = [
       'A device inventory platform on Angular, ASP.NET Core and MongoDB with full CRUD, JWT authentication and role-based access. It features an AI-powered description generator using a local Ollama model and a custom free-text search engine with relevance ranking.',
     year: '2026',
     tech: ['Angular', 'ASP.NET Core', 'MongoDB', 'Ollama'],
-    sourceUrl: 'https://github.com/motocsky09',
+    sourceUrl: 'https://github.com/motocsky09/Device-Management',
   },
   {
     name: 'MeigoWeb',
     summary:
       'A full-stack e-commerce platform for clothing retail built with Angular, ASP.NET Core and SQL Server. Includes cart and order management, role-based access with IdentityServer and JWT, and an admin dashboard with inventory control and monthly sales reporting.',
-    year: '2024',
+    year: '2024 - 2025',
     tech: ['Angular', 'ASP.NET Core', 'SQL Server', 'JWT'],
-    sourceUrl: 'https://github.com/motocsky09',
+    sourceUrl: 'https://github.com/motocsky09/MeigoWeb',
   },
   {
     name: 'Wing Tsun Connect',
@@ -71,13 +71,22 @@ export const PROJECTS: Project[] = [
       'A responsive showcase website for a martial-arts academy, built as an Angular SPA with modular, reusable components. Deployed to production on Netlify with GitHub-integrated CI/CD for automatic updates on every commit.',
     year: '2026',
     tech: ['Angular', 'TypeScript', 'Netlify', 'CI/CD'],
-    sourceUrl: 'https://github.com/motocsky09',
+    demoUrl: 'https://wingtsun.netlify.app/',
+    sourceUrl: 'https://github.com/motocsky09/WingTsun',
+  },
+   {
+    name: 'Meridian Onboarding',
+    summary:
+      'A web application that helps new employees at Meridian navigate their first month. HR onboards a new hire through a simple form and shares a personalized link. The new employee opens that link and sees their onboarding dashboard.',
+    year: '2026',
+    tech: ['Angular', 'TypeScript', '.NET 8', 'MongoDb'],
+    sourceUrl: 'https://github.com/motocsky09/meridian-onboarding',
   },
   {
     name: 'Portfolio Website',
     summary:
       'This very site — a fast, responsive single-page application built with Angular 16 and Bootstrap 5, featuring a layered dark theme and lazy-loaded pages, deployed as a static app.',
-    year: '2025',
+    year: '2026 - present',
     tech: ['Angular', 'Bootstrap', 'SCSS'],
     sourceUrl: 'https://github.com/motocsky09/Personal-portfolio',
   },

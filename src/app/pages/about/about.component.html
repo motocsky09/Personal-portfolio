@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-7 order-2 order-lg-1">
-        <span class="eyebrow" *ngIf="profile.available">
+        <span class="section-label" *ngIf="profile.available">
           <i class="bi bi-circle-fill me-1 available-dot"></i>Available for work
         </span>
         <h1 class="display-4 fw-bold mt-3 mb-3">
@@ -16,7 +16,7 @@
         <div class="d-flex flex-wrap gap-3 mt-4">
           <a
             *ngFor="let social of profile.socials"
-            class="hero-social"
+            class="social-icon"
             [href]="social.url"
             [attr.aria-label]="social.label"
             target="_blank"
@@ -46,7 +46,7 @@
 
 <section class="section surface">
   <div class="container">
-    <div class="text-center mb-2"><span class="eyebrow">What I do</span></div>
+    <div class="text-center mb-2"><span class="section-label">What I do</span></div>
     <h2 class="section-heading d-block text-center mx-auto">Skills &amp; expertise</h2>
     <div class="row g-4 mt-1">
       <div class="col-md-4" *ngFor="let group of skillGroups">

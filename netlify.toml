@@ -1,0 +1,19 @@
+# Netlify configuration for the Angular portfolio.
+# Netlify reads this file automatically on every deploy.
+
+[build]
+  # How Netlify builds the site (same command you run locally).
+  command = "npm run build"
+  # The folder Angular outputs the finished site to.
+  publish = "dist/portfolio"
+
+[build.environment]
+  # Pin the Node.js version so builds are consistent.
+  NODE_VERSION = "18"
+
+# Send every URL to index.html so Angular's router can handle
+# pages like /about or /contact (prevents 404 on refresh).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

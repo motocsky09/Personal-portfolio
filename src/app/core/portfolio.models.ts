@@ -6,8 +6,9 @@ export interface SocialLink {
 
 export interface Profile {
   name: string;
+  firstName: string;
   role: string;
-  tagline: string;
+  tagline: string[];
   location: string;
   email: string;
   phone: string;
@@ -23,8 +24,9 @@ export interface SkillGroup {
 
 export interface Project {
   name: string;
-  summary: string;
+  summary: string[];
   year: string;
+  status?: string;
   tech: string[];
   demoUrl?: string;
   sourceUrl?: string;
@@ -34,7 +36,7 @@ export interface TimelineItem {
   title: string;
   organisation: string;
   period: string;
-  description: string;
+  description: string[];
 }
 
 export interface LanguageItem {

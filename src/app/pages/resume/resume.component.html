@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="col-md-4 text-md-end mt-3 mt-md-0">
-        <a class="btn btn-primary" href="assets/cv/Andrei-Motoc-CV.pdf" download>
+        <a class="btn btn-primary" href="assets/cv/Motoc_Andrei_CV.pdf" download>
           <i class="bi bi-download me-2"></i>Download CV
         </a>
       </div>
@@ -23,7 +23,9 @@
             <div class="timeline-period">{{ item.period }}</div>
             <h4 class="h6 fw-bold mb-1">{{ item.title }}</h4>
             <div class="text-primary small mb-2">{{ item.organisation }}</div>
-            <p class="text-muted mb-0">{{ item.description }}</p>
+            <p class="text-muted timeline-line" *ngFor="let line of item.description; let last = last" [class.mb-0]="last">
+              {{ line }}
+            </p>
           </div>
         </div>
 
@@ -33,7 +35,9 @@
             <div class="timeline-period">{{ item.period }}</div>
             <h4 class="h6 fw-bold mb-1">{{ item.title }}</h4>
             <div class="text-primary small mb-2">{{ item.organisation }}</div>
-            <p class="text-muted mb-0">{{ item.description }}</p>
+            <p class="text-muted timeline-line" *ngFor="let line of item.description; let last = last" [class.mb-0]="last">
+              {{ line }}
+            </p>
           </div>
         </div>
       </div>

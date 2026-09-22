@@ -10,11 +10,14 @@
       <div class="col-md-6" *ngFor="let project of projects">
         <article class="card h-100 shadow-sm card-hover">
           <div class="card-body p-4 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex justify-content-between align-items-start mb-2 gap-2">
               <h3 class="h5 fw-bold mb-0">{{ project.name }}</h3>
-              <span class="badge year-badge fw-normal">{{ project.year }}</span>
+              <div class="d-flex flex-wrap gap-2 justify-content-end">
+                <span class="badge status-badge fw-normal" *ngIf="project.status">{{ project.status }}</span>
+                <span class="badge year-badge fw-normal">{{ project.year }}</span>
+              </div>
             </div>
-            <p class="text-muted">{{ project.summary }}</p>
+            <p class="text-muted summary-line" *ngFor="let line of project.summary">{{ line }}</p>
             <div class="d-flex flex-wrap gap-2 mb-4">
               <span class="badge badge-tech rounded-pill px-3 py-2" *ngFor="let tech of project.tech">
                 {{ tech }}

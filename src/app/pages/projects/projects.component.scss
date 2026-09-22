@@ -7,6 +7,19 @@
   color: var(--bs-secondary-color);
 }
 
+.status-badge {
+  background-color: var(--accent-soft);
+  color: #9ec1ff;
+}
+
+.summary-line {
+  margin-bottom: 0.4rem;
+
+  &:last-of-type {
+    margin-bottom: 1.25rem;
+  }
+}
+
 .link-action {
   font-weight: 500;
   color: var(--bs-primary);

@@ -137,8 +137,8 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCE: TimelineItem[] = [
   {
-    title: 'Back-Office Operations & Process Automation',
-    organisation: 'FinProm — Financial & Commercial Intermediary',
+    title: 'Financial & Commercial Intermediary (Insurance Back-Office Operations)',
+    organisation: 'FinProm',
     period: '2021 — Present',
     description: [
       "Process client case files for 6 Italian insurance providers (AXA, Cardif, K5, Net Insurance, Sogecap SA, Vittoria) on Q-Task, the company's multi-bank cloud platform.",
@@ -161,7 +161,7 @@ export const EXPERIENCE: TimelineItem[] = [
 
 export const EDUCATION: TimelineItem[] = [
   {
-    title: 'B.Sc. Automation and Applied Informatics',
+    title: "Bachelor's Degree in Automation and Applied Informatics",
     organisation: 'University of Oradea',
     period: '2020 — 2024',
     description: [

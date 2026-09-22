@@ -58,9 +58,9 @@
         <h3 class="h5 fw-bold mt-5 mb-4"><i class="bi bi-translate me-2 text-primary"></i>Languages</h3>
         <div class="card shadow-sm">
           <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-center" *ngFor="let language of languages; let last = last" [class.mb-3]="!last">
+            <div class="language-row" *ngFor="let language of languages; let last = last" [class.mb-3]="!last">
               <span class="fw-semibold">{{ language.name }}</span>
-              <span class="text-body-secondary">{{ language.level }}</span>
+              <span class="text-body-secondary language-level">{{ language.level }}</span>
             </div>
           </div>
         </div>
